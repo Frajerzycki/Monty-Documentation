@@ -1,0 +1,33 @@
+
+
+.code {
+    background-color: #242526;
+    border-radius: 1%;
+    border-width: 0;
+    padding: 10px;
+    font-size: 120%;
+    color:white;
+
+}
+
+.text {
+    padding: 10px;
+    font-size: 120%;
+    color:black;
+
+}
+
+.data-type-keyword {
+    color: #4fba5a;
+}
+
+.keyword {
+    color: #5150ba;
+}
+.string {
+    color: #4e92ba;
+}
+
+.number {
+    color: #ba4d4d;
+}

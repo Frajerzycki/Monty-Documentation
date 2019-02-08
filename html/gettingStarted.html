@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="../css/materialize.min.css" media="screen,projection" />
+    <!--Let browser know website is optimized for mobile-->
+    <link rel="stylesheet" href="../css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jak zacząć?</title>
+</head>
+
+<body class="light-blue lighten-3">
+    <div class="navbar-fixed" style="background-color: #33b27b">
+        <nav class="blue darken-4">
+            <div class="nav-wrapper">
+                <a href="#" class="brand-logo right">Monty</a>
+                <a href="#" data-target="mobile-demo" class="sidenav-trigger">
+                    <i class="material-icons">menu</i>
+                </a>
+                <ul id="nav-mobile" class="left hide-on-med-and-down">
+                    <li class="yellow darken-4">
+                        <a href="../index.html">Strona główna</a>
+                    </li>
+                    <li class="purple darken-3">
+                        <a href="#hello-world">Hello world</a>
+                    </li>
+                    <li class="red darken-2">
+                        <a href="#sposob-zapisu">Sposób zapisu operacji matematycznych</a>
+                    </li>
+                    <li class="green darken-1">
+                        <a href="#zmienne">Zmienne</a>
+                    </li>
+                    <li class="pink lighten-1">
+                        <a href="#petle">Pętle</a>
+                    </li>
+                    <li class="cyan darken-3">
+                        <a href="#funkcje">Funkcje</a>
+                    </li>
+                    <li class="pink darken-4">
+                        <a href="#struktury">Struktury</a>
+                    </li>
+                    <li class="blue lighten-1">
+                        <a href="#wiecej">Więcej szczegółów</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <div style="margin:1%">
+        <div class="section" id="hello-world">
+            <h1 class="flow-text">Hello world:</h1>
+            <div class="col s12 row">
+                <div class="code col s2">
+                    <p>
+                        <span class="keyword">import</span> sml.io.println;
+                        <br> println(
+                        <span class="string">"Hello world!"</span>);
+                    </p>
+                </div>
+            </div>
+            <div class="text col s5">
+                <blockquote>
+                    Pierwsza linijka kodu importuje z biblioteki standardowej, z podkatalogu
+                    <span class="keyword">io</span> funkcję
+                    <span class="keyword">println</span>, która w drugiej linijce jest użyta do wyświetlenia napisu
+                    <span class="string">"Hello world!"</span>.</blockquote>
+            </div>
+        </div>
+        <div class="divider" style="width:100%"></div>
+        <div class="section" id="sposob-zapisu">
+            <h1 class="flow-text">Sposób zapisu operacji matematycznych:</h1>
+            <blockquote class="text">
+                <p>
+                    W większości języków programowania sposób zapisu operacji matematycznych to nie problem i jest
+                    oczywisty,
+                    <br> lecz w Montym wygląda to nieco inaczej, ponieważ używana jest
+                    <a href="https://pl.wikipedia.org/wiki/Odwrotna_notacja_polska">odwrotna notacja polska</a>.
+                    <br>To rozwiązanie ma swoje zalety np. brak kolejności wykonywania działań (kolejność można
+                    wywnioskować z
+                    sposobu zapisu), większa czytelność, szybszy algorytm parsowania.
+                    <br>Zamiast
+                    <div class="row col s12">
+            </blockquote>
+
+            <div class="row col s12">
+                <div class="code col s1">
+                    <p>
+                        <span class="number">2</span>
+                        +
+                        <span class="number">2</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <blockquote class="text">jest</blockquote>
+
+        <div class="row col s12">
+            <div class="code col s1">
+                <p>
+                    <span class="number">2</span>
+                    <span class="number">2</span>
+                    +</p>
+            </div>
+        </div>
+        <br>
+        <blockquote class="text">
+
+            operator idzie na koniec, a używanie nawiasów w działaniu
+            <br>(chyba, że używa się do oddzielenia argumentów funkcji od jej nazwy, co jest wymagane) jest niepoprawne
+            i prowadzi do błędu.
+            <br> To samo dotyczy porównań, przypisań i wszystkich innych operacji:
+        </blockquote>
+
+        <div class="row col s12">
+            <div class="code col s2">
+                <p>
+                    <span class="data-type-keyword">int</span>
+
+                    a
+                    <span class="number">2</span>
+                    =;
+                    <br>
+                    <span class="keyword">if</span> a
+                    <span class="number">2</span> == a
+                    <span class="number">3</span> == |;
+                    <br>
+                    <span style="margin-left: 2em">a
+                        <span class="number">1</span> -=;</span>
+                    <br>
+                    <span class="keyword">end</span>;</p>
+            </div>
+        </div>
+        <blockquote class="text">
+            Na każdy operator przypadają dwa literały, więc
+            <span style="color:red">NIE</span> można zrobić tak:
+        </blockquote>
+        <div class="row col s12">
+            <div class="code col s1">
+                <p>
+                    <span class="number">2</span>
+                    <span class="number">2</span>
+                    <span class="number">2</span>
+                    +
+                </p>
+            </div>
+        </div>
+        </blockquote>
+        <div class="divider" style="width:100%"></div>
+
+        <div class="section" id="zmienne">
+            <h1 class="flow-text">Zmienne:</h1>
+            <div class="row col s12">
+                <div class="code col s1">
+                    <p>
+                        <span class="data-type-keyword">int</span> a
+                        <span class="number">1</span> =;
+                    </p>
+                </div>
+            </div>
+            <div class="col s8 text" style="padding: 0">
+                <blockquote>
+                    Jest to deklaracja zmiennej nazywającej się
+                    <span class="keyword">a</span>
+                    o typie danych
+                    <span class="data-type-keyword">int</span>, który jest statyczny.
+                    <br>Typ statyczny jest takim typem, że po zadeklarowaniu nie można go zmienić.</blockquote>
+                <blockquote>
+                    W języku Monty występują także zmienne o typach dynamicznych. Są to takie zmienne, którym z kolei
+                    po zadeklarowaniu można
+                    zmienić typ danych na inny podczas działania programu.
+                    <br>Przy deklaracji zmiennej o typie dynamicznym również trzeba go podać, ponieważ dynamiczność
+                    typu
+                    jest tutaj jedynie możliwością jego zmiany:</blockquote>
+            </div>
+            <div class="col s7 row">
+                <div class="code col s2">
+                    <p>
+                        <span class="keyword">dynamic</span>
+                        <span class="data-type-keyword">int</span> a
+                        <span class="number">1</span> =;
+                    </p>
+                </div>
+            </div>
+            <div class="col s6">
+                <blockquote class="text">
+                    Typy danych zmienia się w sposób jawny:
+                </blockquote>
+            </div>
+            <div class="col s7 row">
+                <div class="code col s2">
+                    <p>
+                        <span class="keyword">change</span> a
+                        <span class="keyword">to</span>
+                        <span class="data-type-keyword">float</span>;</p>
+                </div>
+            </div>
+            <div class="col s6">
+                <blockquote class="text">
+                    Teraz zmienna
+                    <span class="keyword">a</span> jest typu
+                    <span class="data-type-keyword">float</span>
+                    i jej wartość wynosi
+                    <span class="number">1.0</span>.
+                    <br> Wszystkich typów danych jest pięć i są nimi:<br> - <span class="data-type-keyword">int</span>
+                    (liczba całkowita),<br> - <span class="data-type-keyword">float</span> (liczba
+                    zmiennoprzecinkowa),<br>
+                    -
+                    <span class="data-type-keyword">string</span> (ciąg znaków),<br> - <span
+                        class="data-type-keyword">boolean</span>
+                    (prawda albo fałsz),<br> - <span class="data-type-keyword">any</span> (dowolny typ danych prosty
+                    lub instancja struktury).
+                </blockquote>
+            </div>
+        </div>
+        <div class="divider" style="width: 100%"></div>
+
+        <div id="petle">
+            <h1 class="flow-text">Pętle:</h1>
+            <blockquote class="text">
+                W języku Monty trzy rodzaje pętli:
+                <br> - <span class="keyword">while</span>,
+                <br> - <span class="keyword">do while</span>,
+                <br> - <span class="keyword">for</span>.
+            </blockquote>
+            <div class="row col s12">
+                <div class="code col s3">
+                    <p>
+                        <span class="keyword">import</span> sml.io.println;
+                        <br>
+                        <span class="data-type-keyword">int</span> a
+                        <span class="number">100</span> =;
+                        <br>
+                        <span class="keyword">while</span> a
+                        <span class="number">100</span>
+                        < a <span class="number">0</span> > &;
+                            <br>
+                            <span style="margin: 2em;">println(a);</span><br>
+                            <span style="margin: 2em;">a <span class="number">1</span> -=;</span>
+                            <br>
+                            <span class="keyword">end</span>;
+                            <br>
+                    </p>
+                </div>
+                <div class="code col s3 offset-s1">
+                    <p>
+                        <span class="keyword">import</span> sml.io.println;
+                        <br>
+                        <span class="data-type-keyword">int</span> a
+                        <span class="number">100</span> =;
+                        <br>
+                        <span class="keyword">do while</span> a
+                        <span class="number">100</span>
+                        < a <span class="number">0</span> > &;
+                            <br>
+                            <span style="margin: 2em;">println(a);</span><br>
+                            <span style="margin: 2em;">a <span class="number">1</span> -=;</span>
+                            <br>
+                            <span class="keyword">end</span>;
+                            <br>
+                    </p>
+                </div>
+            </div>
+            <blockquote class="text">
+                Po uruchomieniu obu kodów można zauważyć, że podczas wykonywania pierwszego kodu z pętlą
+                <span class="keyword">while</span>, nic się nie wyświetliło,
+                <br> a podczas wykonywania drugiego już tak.
+                <br> Pętla <span class="keyword">do while</span> podczas pierwszego powtórzenia nie sprawdza warunku,
+                a pętla <span class="keyword">while</span> już tak.<br>
+                Jest jeszcze wspomniania wcześniej pętla for.
+            </blockquote>
+            <div class="row col s12">
+                <div class="code col s3">
+                    <p>
+                        <span class="keyword">import</span> sml.io.println;
+                        <br>
+                        <span class="keyword">for</span> x
+                        <span class="keyword">in</span>
+                        <span class="string">"Test"</span>;
+                        <br>
+                        <span style="margin: 2em;">println(x);</span><br>
+                        <span class="keyword">end</span>;
+                        <br>
+                    </p>
+                </div>
+            </div>
+            <blockquote class="text">
+                Powyższy kod wyświetli każdą literę napisu <span class="string">"Test"</span> w nowej lini.<br>
+                Pętle można przerywać słowem kluczowym <span class="keyword">break</span>; i pomijać aktualne
+                powtórzenie dzięki <span class="keyword">continue</span>;.
+            </blockquote>
+            <div class="divider" style="width: 100%"></div>
+            <div id="funkcje">
+                <h1 class="flow-text">Funkcje:</h1>
+                <blockquote class="text">
+                    W Montym występują również funkcje. Poniżej znajduje się przykład funkcji podającej wartość
+                    absolutną liczby.
+                </blockquote>
+                <div class="row col s12">
+                    <div class="code col s3">
+                        <p>
+                            <span class="keyword">func</span> <span class="data-type-keyword">float</span> abs
+                            <span class="data-type-keyword">float</span> x;<br>
+                            <span style="margin-left: 2em;" class="keyword">if</span> x
+                            <span class="number">0</span> >=;<br>
+                            <span style="margin-left: 4em;" class="keyword">return</span> x;<br>
+                            <span style="margin-left: 2em;" class="keyword">end</span>;<br>
+                            <span style="margin-left: 2em;" class="keyword">return</span> x!;<br>
+                            <span class="keyword">end</span>;
+
+                        </p>
+                    </div>
+                </div>
+                <blockquote class="text">
+                    Z kolei wywołanie tej funkcji wygląda w sposób pokazany niżej.
+                </blockquote>
+                <div class="row col s12">
+                    <div class="code col s3">
+                        <p>
+                            abs(<span class="number">-2.3</span>);
+                        </p>
+                    </div>
+                </div>
+                <blockquote class="text">
+                    Oczywistym faktem jest to, że nic się nie wyświetli po wywołaniu tej funkcji, ponieważ to, że tak
+                    się stanie jest napisane dokładnie nigdzie,<br>
+                    aby się tak jednak stało należy podać wywołanie tej funkcji jako argument do funkcji println albo
+                    print, którą trzeba najpierw zaimportować z sml.io.
+                </blockquote>
+                <div class="row col s12">
+                    <div class="code col s3">
+                        <p>
+                            <span class="keyword">import</span> sml.io.println;<br>
+                            println(abs(<span class="number">-2.3</span>));
+                        </p>
+                    </div>
+                </div>
+                <blockquote class="text">
+                    Poniżej jest przykład pustych funkcji: bez parametrów i z wieloma parametrami.
+                </blockquote>
+                <div class="row col s12">
+                    <div class="code col s3">
+                        <p>
+                            <span class="keyword">func</span> <span class="data-type-keyword">void</span> test1;<br>
+                            <span class="keyword">end</span>;<br><br>
+
+                            <span class="keyword">func</span> <span class="data-type-keyword">void</span> test2
+                            <span class="data-type-keyword">any</span> a,
+                            <span class="data-type-keyword">any</span> b;<br>
+                            <span class="keyword">end</span>;
+                        </p>
+                    </div>
+                </div>
+                <blockquote class="text">
+                    Funkcje mogą być zagnieżdżone, a to czy zostaną zadeklarowane przed czy po ich wywołaniu
+                    nie ma w Montym znaczenia.
+                </blockquote>
+                <div class="row col s12">
+                    <div class="code col s3">
+                        <p>
+                            <span class="keyword">func</span> <span class="data-type-keyword">int</span> fib
+                            <span class="data-type-keyword">int</span> n;<br>
+                            <span style="margin-left: 2em" class="keyword">return</span> iterFib(n, <span>0</span>,
+                            <span>1</span>);<br>
+                            <span style="margin-left: 2em" class="keyword">func</span> <span
+                                class="data-type-keyword">int</span>
+                            iterFib
+                            <span class="data-type-keyword">int</span> n, <span class="data-type-keyword">int</span> l,
+                            <span class="data-type-keyword">int</span>
+                            r;<br>
+                            <span style="margin-left: 4em" class="keyword">if</span> n <span class="number">0</span>
+                            ==;<br>
+                            <span style="margin-left: 6em" class="keyword">return</span> l;<br>
+                            <span style="margin-left: 4em" class="keyword">end</span>;<br>
+                            <span style="margin-left: 4em" class="keyword">return</span> iterFib(n <span>1</span> -, r,
+                            l r +);<br>
+                            <span style="margin-left: 2em" class="keyword">end</span>;<br>
+                            <span class="keyword">end</span>;
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="divider" style="width: 100%"></div>
+        <div id="struktury">
+            <h1 class="flow-text">Struktury:</h1>
+            <blockquote class="text">
+                Monty jest językiem obiektowym, aczkolwiek szablonem tychże obiektów nie są klasy, a stare dobre
+                struktury.<br>
+                Struktury mogą w sobie zawierać funkcje, zmienne i inne, zagnieżdżone struktury. <br>
+                Strukturę inicjalizuje, jeśli istnieje, funkcja void init, przyjmująca dowolną ilość argumentów.<br>
+                Można porównywać obiekty operatorem ==, jeśli lewy operand zawiera w sobie funkcję boolean equals,
+                przyjmującą jeden argument o typie any, w przeciwnym wypadku wartość zwracana przez operację porównania
+                będzie równa <span class="keyword">false</span>.<br>
+                Jeżeli struktura zawiera funkcję string toString nie przyjmującą argumentów, to kiedy zajdzie potrzeba
+                zamiany obiektu na ciąg znaków właśnie ta funkcja zostanie wywołana,
+                w przeciwnym wypadku będzie to nazwa struktury, która musi zaczynać się wielką literą, hash (<span
+                    class="string">"#"</span>), numer instancji tej struktury liczony od zera (nazwa <span
+                    class="string">"#"</span> numer + +).<br>Deklaracja struktury oprócz samej struktury deklaruje
+                jeszcze
+                funkcję o jej nazwie, która jeśli struktura zawiera funkcję init, przyjmuje wszystkie jej argumenty i ją
+                wywołuję.<br>Niezależnie od tego czy funkcja init jest w strukturze, funkcja o nazwie struktury zwraca
+                jej
+                nową instancję.<br>Jest jeszcze druga funkcja, która jest deklarowana przy deklaracji struktury. Funkcja
+                ta ma nazwę struktury z dodanym jeszcze na początku <span class="string">"is"</span> i sprawdza czy
+                wartość jest instancją tej struktury.
+
+            </blockquote>
+            <div class="row col s12">
+                <div class="code col s8">
+                    <p>
+                        <span class="keyword">import</span> sml.io.println;<br>
+                        <span class="keyword">struct</span> Person;<br>
+                        <span style="margin-left: 2em" class="data-type-keyword">string</span> firstName;<br>
+                        <span style="margin-left: 2em" class="data-type-keyword">string</span> lastName;<br>
+                        <span style="margin-left: 2em" class="keyword">func</span>
+                        <span class="data-type-keyword">void</span> init
+                        <span class="data-type-keyword">string</span> firstName, <span
+                            class="data-type-keyword">string</span> lastName;<br>
+                        <span style="margin-left: 4em">this.firstName firstName =;</span><br>
+                        <span style="margin-left: 4em">this.lastName lastName
+                            =;</span><br>
+                        <span style="margin-left: 2em" class="keyword">end</span>;<br><br>
+                        <span style="margin-left: 2em" class="keyword">func</span>
+                        <span class="data-type-keyword">boolean</span> equals <span class="data-type-keyword">any</span>
+                        other;<br>
+                        <span style="margin-left: 4em" class="keyword">return</span> isPerson(other) firstName
+                        other.firstName == lastName other.lastName == & &;
+                        <br>
+                        <span style="margin-left: 2em" class="keyword">end</span>;<br><br>
+                        <span style="margin-left: 2em" class="keyword">func</span> <span
+                            class="data-type-keyword">string</span> toString; <br>
+                        <span style="margin-left: 4em" class="keyword">return</span> firstName <span class="string">"
+                            "</span> lastName + +;<br>
+                        <span style="margin-left: 2em" class="keyword">end</span>;
+
+                        <br>
+                        <span class="keyword">end</span>;<br>
+
+                        <span class="data-type-keyword">any</span> me1 Person(
+                        <span class="string">"Szymon"</span>, <span class="string">"Perlicki"</span>) =;<br>
+                        <span class="data-type-keyword">any</span> me2 Person(
+                        <span class="string">"Szymon"</span>, <span class="string">"Perlicki"</span>) =;<br>
+                        println(me1);<br>
+                        println(me2);<br>
+                        println(me1 me2 ==);
+                </div>
+                </p>
+            </div>
+        </div>
+        <div class="divider" style="width: 100%"></div>
+        <div id="wiecej">
+            <h1 class="flow-text">Więcej szczegółów:</h1>
+            <blockquote class="text">
+                W Montym znajduje się jeszcze dużo więcej rzeczy między innymi tablice, listy, stos, funkcje
+                matematyczne, unix time i wiele więcej.<br>
+                Aby dowiedzieć się więcej na temat języka Monty można przeczytać dokumentację sml (Standard Monty
+                Library).<br>
+                Na stronie główne znajduje się przekierowanie do tej dokumentacji.
+            </blockquote>
+        </div>
+    </div>
+    </div>
+    <!--JavaScript at end of body for optimized loading-->
+    <script type="text/javascript" src="../js/materialize.min.js"></script>
+    <script type="text/javascript" src="../js/jquery.js"></script>
+    <script type="text/javascript" src="../js/init.js"></script>
+
+</body>
+
+</html>
