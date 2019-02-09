@@ -408,7 +408,9 @@
                 jej
                 nową instancję.<br>Jest jeszcze druga funkcja, która jest deklarowana przy deklaracji struktury. Funkcja
                 ta ma nazwę struktury z dodanym jeszcze na początku <span class="string">"is"</span> i sprawdza czy
-                wartość jest instancją tej struktury.
+                wartość jest instancją tej struktury. Aby obiekt był iterowalny należy w nim umieścić zagnieżdzoną
+                strukturę o nazwie Iterator, w której jest funkcja <span class="data-type-keyword">boolean</span>
+                hasNext i <span class="data-type-keyword">any</span> next, obie funkcje nie mogą przyjmować argumentów.
 
             </blockquote>
             <div class="row col s12">
@@ -449,6 +451,8 @@
                         println(me1);<br>
                         println(me2);<br>
                         println(me1 me2 ==);
+                        println(me1.firstName);<br>
+                        println(me1.lastName);<br>
                 </div>
                 </p>
             </div>

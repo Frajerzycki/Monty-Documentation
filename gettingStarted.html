@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
+    <!--Let browser know website is optimized for mobile-->
+    <link rel="stylesheet" href="css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jak zacząć?</title>
+</head>
+
+<body class="light-blue lighten-3">
+
+    <div class="navbar-fixed" style="background-color: #33b27b">
+        <nav class="blue darken-4">
+            <div class="nav-wrapper">
+                <a href="#" class="brand-logo right">Monty</a>
+                <a href="#" data-target="mobile-demo" class="sidenav-trigger">
+                    <i class="material-icons">menu</i>
+                </a>
+                <ul id="nav-mobile" class="left hide-on-med-and-down">
+                    <li class="yellow darken-4">
+                        <a href="index.html">Strona główna</a>
+                    </li>
+                    <li class="purple darken-3">
+                        <a href="#hello-world">Hello world</a>
+                    </li>
+                    <li class="red darken-2">
+                        <a href="#sposob-zapisu">Sposób zapisu operacji matematycznych</a>
+                    </li>
+                    <li class="green darken-1">
+                        <a href="#zmienne">Zmienne</a>
+                    </li>
+                    <li class="pink lighten-1">
+                        <a href="#petle">Pętle</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <div style="margin:1%">
+
+        <div class="section" id="hello-world">
+            <h1 class="flow-text">Hello world:</h1>
+            <div class="col s12 row">
+                <div class="code col s2">
+                    <p>
+                        <span class="keyword">import</span> sml.io.println;
+                        <br> println(
+                        <span class="string">"Hello world"</span>);
+                    </p>
+                </div>
+            </div>
+            <div class="text col s5">
+                <blockquote>
+                    Pierwsza linijka kodu importuje z biblioteki standardowej, z podkatalogu
+                    <span class="keyword">io</span> funkcję
+                    <span class="keyword">println</span>, która w drugiej linijce jest użyta do wyświetlenia napisu
+                    <span class="string">"Hello world"</span>.</blockquote>
+            </div>
+        </div>
+        <div class="divider" style="width:100%"></div>
+        <div class="section" id="sposob-zapisu">
+            <h1 class="flow-text">Sposób zapisu operacji matematycznych:</h1>
+            <blockquote class="text">
+                <p>
+                    W większości języków programowania sposób zapisu operacji matematycznych to nie problem i jest oczywisty,
+                    <br> lecz w Montym wygląda to nieco inaczej, ponieważ używana jest
+                    <a href="https://pl.wikipedia.org/wiki/Odwrotna_notacja_polska">odwrotna notacja polska</a>.
+                    <br>To rozwiązanie ma swoje zalety np. brak kolejności wykonywania działań (kolejność można wywnioskować z
+                    sposobu zapisu), większa czytelność, szybszy algorytm parsowania.
+                    <br>Zamiast
+                    <div class="row col s12">
+            </blockquote>
+
+            <div class="row col s12">
+                <div class="code col s1">
+                    <p>
+                        <span class="number">2</span>
+                        +
+                        <span class="number">2</span>
+                    </p>
+                </div>
+            </div>
+            </div>
+            <blockquote class="text">jest</blockquote>
+
+            <div class="row col s12">
+                <div class="code col s1">
+                    <p>
+                        <span class="number">2</span>
+                        <span class="number">2</span>
+                        +</p>
+                </div>
+            </div>
+            <br>
+            <blockquote class="text">
+
+                operator idzie na koniec, a używanie nawiasów w działaniu
+                <br>(chyba, że używa się do oddzielenia argumentów funkcji od jej nazwy, co jest wymagane) jest niepoprawne i
+                prowadzi do błędu.
+                <br> To samo dotyczy porównań, przypisań i wszystkich innych operacji:
+            </blockquote>
+
+            <div class="row col s12">
+                <div class="code col s2">
+                    <p>
+                        <span class="keyword">static</span>
+                        <span class="data-type-keyword">int</span>
+
+                        a
+                        <span class="number">2</span>
+                        =;
+                        <br>
+                        <span class="keyword">if</span> a
+                        <span class="number">2</span> == a
+                        <span class="number">3</span> == ||;
+                        <br>
+                        <span style="margin-left: 2em">a
+                            <span class="number">1</span> -=;</span>
+                        <br>
+                        <span class="keyword">end</span>;</p>
+                </div>
+            </div>
+            <blockquote class="text">
+                Na każdy operator przypadają dwa literały, więc
+                <span style="color:red">NIE</span> można zrobić tak:
+            </blockquote>
+            <div class="row col s12">
+                <div class="code col s1">
+                    <p>
+                        <span class="number">2</span>
+                        <span class="number">2</span>
+                        <span class="number">2</span>
+                        +
+                    </p>
+                </div>
+            </div>
+            </blockquote>
+            <div class="divider" style="width:100%"></div>
+
+            <div class="section" id="zmienne">
+                <h1 class="flow-text">Zmienne:</h1>
+                <div class="row col s12">
+                    <div class="code col s1">
+                        <p>
+                            <span class="keyword">static</span>
+                            <span class="data-type-keyword">int</span> a
+                            <span class="number">1</span> =;
+                        </p>
+                    </div>
+                </div>
+                <div class="col s8 text" style="padding: 0">
+                    <blockquote>
+                        Jest to deklaracja zmiennej statycznej o nazwie
+                        <span class="keyword">a</span> i typie danych
+                        <span class="data-type-keyword">int</span>.
+                        <br>Ale co to właściwie znaczy zmienna statyczna o typie danych
+                        <span class="data-type-keyword">int</span>?
+                        <br>Znaczy to, że ta zmienna przechowuje wartość, która jest liczbą całkowitą i po deklaracji nie może
+                        zmienić typu danych na inny.</blockquote>
+                    <blockquote>
+                        W języku Monty występują również zmienne dynamiczne. Są to takie zmienne, którym po zadeklarowaniu można zmienić typ danych
+                        na inny podczas działania programu.
+                        <br>Przy deklaracji dynamicznej zmiennej również trzeba podać typ danych, ponieważ zmienna w tym języku
+                        musi mieć zawsze przypisany określony typ danych:</blockquote>
+                </div>
+                <div class="col s7 row">
+                    <div class="code col s2">
+                        <p>
+                            <span class="keyword">dynamic</span>
+                            <span class="data-type-keyword">int</span> a
+                            <span class="number">1</span> =;
+                        </p>
+                    </div>
+                </div>
+                <div class="col s6">
+                    <blockquote class="text">
+                        Typy danych zmienia się w sposób jawny:
+                    </blockquote>
+                </div>
+                <div class="col s7 row">
+                    <div class="code col s2">
+                        <p>
+                            <span class="keyword">change</span> a
+                            <span class="keyword">to</span>
+                            <span class="data-type-keyword">float</span>;</p>
+                    </div>
+                </div>
+                <div class="col s6">
+                    <blockquote class="text">
+                        Teraz zmienna
+                        <span class="keyword">a</span> jest typu
+                        <span class="data-type-keyword">float</span>
+                        i jej wartość wynosi
+                        <span class="number">1.0</span>.
+                        <br> Wszystkich typów danych jest pięć i są nimi:
+                        <span class="data-type-keyword">int</span> (liczba całkowita),
+                        <span class="data-type-keyword">float</span> (liczba zmiennoprzecinkowa),
+                        <span class="data-type-keyword">string</span> (ciąg znaków),
+                        <span class="data-type-keyword">array</span> (tablica mogąca przechowywać dowolne typy danych).
+                    </blockquote>
+                </div>
+            </div>
+            <div class="divider" style="width: 100%"></div>
+            <div id="petle">
+                <h1 class="flow-text">Pętle:</h1>
+                <blockquote class="text">
+                    W języku Monty występują dwa rodzaje pętli:
+                    <span class="keyword">while</span> i
+                    <span class="keyword">do while</span>.
+                </blockquote>
+                <div class="row col s12">
+                    <div class="code col s3">
+                        <p>
+                            <span class="keyword">import</span> sml.io.println;
+                            <br>
+                            <span class="keyword">static</span>
+                            <span class="data-type-keyword">int</span> a
+                            <span class="number">1</span> =;
+                            <br>
+                            <span class="keyword">while</span> a
+                            <span class="number">2</span> ==;
+                            <br>
+                            <span style="margin: 2em;">println(a);</span>
+                            <br>
+                            <span class="keyword">end</span>;
+                            <br>
+                        </p>
+                    </div>
+                    <div class="code col s3 offset-s1">
+                        <p>
+                            <span class="keyword">import</span> sml.io.println;
+                            <br>
+                            <span class="keyword">static</span>
+                            <span class="data-type-keyword">int</span> a
+                            <span class="number">1</span> =;
+                            <br>
+                            <span class="keyword">do while</span> a
+                            <span class="number">2</span> ==;
+                            <br>
+                            <span style="margin: 2em;">println(a);</span>
+                            <br>
+                            <span class="keyword">end</span>;
+                            <br>
+                        </p>
+                    </div>
+                </div>
+                <blockquote class="text">
+                    Po uruchomieniu obu kodów można zauważyć, że podczas wykonywania pierwszego kodu z pętlą
+                    <span class="keyword">while</span> nic się nie wyświetliłą,
+                    <br> a podczas wykonywania drugiego już tak.
+                    <br> Pętla <span class="keyword">do while</span> podczas pierwszego powtórzenia nie sprawdza warunku, a pętla <span class="keyword">while</span> już tak.
+                </blockquote>
+            </div>
+        </div>
+        <!--JavaScript at end of body for optimized loading-->
+        <script type="text/javascript" src="js/materialize.min.js"></script>
+        <script type="text/javascript" src="js/jquery.js"></script>
+
+        <script type="text/javascript" src="js/init.js"></script>
+
+</body>
+
+</html>
