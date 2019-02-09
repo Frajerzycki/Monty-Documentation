@@ -28,12 +28,62 @@
                         <a href="../data.html">sml.data</a>
                     </li>
                     <li class="indigo lighten-2">
-                        <a href="#get">get</a>
+                        <a href="#append">append</a>
                     </li>
                     <li class="indigo lighten-1">
+                        <a href="#contains">contains</a>
+                    </li>
+                    <li class="indigo">
+                        <a href="#equals">equals</a>
+                    </li>
+                    <li class="indigo darken-1">
+                        <a href="#extend">extend</a>
+                    </li>
+                    <li class="indigo darken-2">
+                        <a href="#find">find</a>
+                    </li>
+                    <li class="indigo darken-3">
+                        <a href="#findFirst">findFirst</a>
+                    </li>
+                    <li class="indigo darken-4">
+                        <a href="#findLast">findLast</a>
+                    </li>
+                    <li class="indigo darken-3">
+                        <a href="#get">get</a>
+                    </li>
+                    <li class="indigo darken-2">
+                        <a href="array/iterator.html">Iterator #do zrobienia</a>
+                    </li>
+                    <li class="indigo darken-1">
                         <a href="#length">length</a>
                     </li>
-
+                    <li class="indigo">
+                        <a href="#replace">replace</a>
+                    </li>
+                    <li class="indigo lighten-1">
+                        <a href="#replaceFirst">replaceFirst</a>
+                    </li>
+                    <li class="indigo lighten-2">
+                        <a href="#replaceLast">replaceLast</a>
+                    </li>
+                    <li class="indigo lighten-1">
+                        <a href="#reversed">reversed</a>
+                    </li>
+                    <li class="indigo">
+                        <a href="#set">set</a>
+                    </li>
+                    <li class="indigo darken-1">
+                        <a href="#subarray">subarray</a>
+                    </li>
+                    <li class="indigo darken-2">
+                        <a href="#toList">toList</a>
+                    </li>
+                    <li class="indigo darken-3">
+                        <a href="#toStack">toStack</a>
+                    </li>
+                    <li class="indigo darken-4">
+                        <a href="#toString">toString</a>
+                    </li>
                 </ul>
             </div>
         </nav>
@@ -41,24 +91,173 @@
     <div class="text col s5">
         <blockquote>
             <h1 class="flow-text">Array:</h1>
-            Array reprezentuje tablicę, wszystkie poniższe funkcje są metodami tej struktury i należy je wywoływać po instacji tego obiektu, po kropce.<br>
-            Konstruktorem tego obiektu jest funkcja o nazwie Array, przyjmuje dowolną liczbę argumentów.
+            Array reprezentuje tablicę, wszystkie poniższe funkcje są metodami tej struktury i należy je wywoływać po
+            instacji tego obiektu, po kropce.<br>
+            Konstruktorem tego obiektu jest funkcja o nazwie Array, przyjmuje dowolną liczbę argumentów o dowolnym
+            typie, z argumentów podanych w konstruktorze zostanie stworzona tablica.
+        </blockquote>
+    </div>
+    <div id="append" class="text col s5">
+        <blockquote>
+            <h1 class="flow-text">Array().append:</h1>
+            <span class="keyword">func</span> <span class="data-type-keyword">any</span> append <span class="data-type-keyword">any</span>
+            element;<br>
+            Zwiększa liczbę elementów tablicy o 1, ustawia miejsce pod ostatnim indeksem na element.<br>
+            Zwraca referencję do tablicy.
+        </blockquote>
+    </div>
+    <div id="contains" class="text col s5">
+        <blockquote>
+            <h1 class="flow-text">Array().contains:</h1>
+            <span class="keyword">func</span> <span class="data-type-keyword">boolean</span> contains <span class="data-type-keyword">any</span>
+            element;<br>
+            Zwraca <span class="keyword">true</span> jeśli element znajduje się w tablicy, w przeciwnym wypadku zwraca
+            <span class="keyword">false</span>.
+        </blockquote>
+    </div>
+    <div id="equals" class="text col s5">
+        <blockquote>
+            <h1 class="flow-text">Array().equals:</h1>
+            <span class="keyword">func</span> <span class="data-type-keyword">boolean</span> equals <span class="data-type-keyword">any</span>
+            other;<br>
+            Zwraca <span class="keyword">true</span> jeśli other jest instancją Array, other ma tą samą długość co
+            this, other.get(i) jest równe this.get(i), dla każdego i &isin; (-1, length), w przeciwnym wypadku zwraca
+            <span class="keyword">false</span>.<br>
+            Można ją wywołać operatorem ==, kiedy lewym literałem jest tablica.
+        </blockquote>
+    </div>
+    <div id="extend" class="text col s5">
+        <blockquote>
+            <h1 class="flow-text">Array().extend:</h1>
+            <span class="keyword">func</span> <span class="data-type-keyword">any</span> extend <span class="data-type-keyword">any</span>
+            otherArray;<br>
+            Jeśli otherArray nie jest instancją Array wyświetla komunikat, miejsce błędu i wychodzi z programu.<br>
+            Zwiększa liczbę elementów tablicy o otherArray.length() i uzupełnia nowo powstałe miejsca elementami
+            tablicy otherArray.<br>
+            Zwraca referencję do tablicy.
+        </blockquote>
+    </div>
+    <div id="find" class="text col s5">
+        <blockquote>
+            <h1 class="flow-text">Array().find:</h1>
+            <span class="keyword">func</span> <span class="data-type-keyword">any</span> find <span class="data-type-keyword">any</span>
+            element;<br>
+            Zwraca tablicę z indeksami, pod którymi występuje element.
+        </blockquote>
+    </div>
+    <div id="findFirst" class="text col s5">
+        <blockquote>
+            <h1 class="flow-text">Array().findFirst:</h1>
+            <span class="keyword">func</span> <span class="data-type-keyword">int</span> findFirst <span class="data-type-keyword">any</span>
+            element;<br>
+            Jeśli istnieje element o wartości równej element zwraca indeks pierwszego takiego elementu, w przeciwnym
+            wypadku zwraca <span class="number">-1</span>.
+        </blockquote>
+    </div>
+    <div id="findLast" class="text col s5">
+        <blockquote>
+            <h1 class="flow-text">Array().findLast:</h1>
+            <span class="keyword">func</span> <span class="data-type-keyword">int</span> findFirst <span class="data-type-keyword">any</span>
+            element;<br>
+            Jeśli istnieje element o wartości równej element zwraca indeks ostatniego takiego elementu, w przeciwnym
+            wypadku zwraca <span class="number">-1</span>.
         </blockquote>
     </div>
     <div id="get" class="text col s5">
         <blockquote>
-            <h1 class="flow-text">Array.get:</h1>
-            <span class="keyword">func</span> <span class="data-type-keyword">any</span> Array.get <span
-                class="data-type-keyword">int</span> i;<br>
-            Zwraca i-ty element tablicy.<br>Jeśli obiektu nie posiada i-tego elementu wyświetla komunikat,
+            <h1 class="flow-text">Array().get:</h1>
+            <span class="keyword">func</span> <span class="data-type-keyword">any</span> get <span class="data-type-keyword">int</span>
+            i;<br>
+            Zwraca i-ty element tablicy.<br>Jeśli tablica nie posiada i-tego elementu wyświetla komunikat,
             miejsce błędu i wychodzi z programu.
         </blockquote>
     </div>
     <div id="length" class="text col s5">
         <blockquote>
-            <h1 class="flow-text">Array.length:</h1>
-            <span class="keyword">func</span> <span class="data-type-keyword">int</span> Array.length;<br>
+            <h1 class="flow-text">Array().length:</h1>
+            <span class="keyword">func</span> <span class="data-type-keyword">int</span> length;<br>
             Zwraca liczbę elementów tablicy.
+        </blockquote>
+    </div>
+    <div id="replace" class="text col s5">
+        <blockquote>
+            <h1 class="flow-text">Array().replace:</h1>
+            <span class="keyword">func</span> <span class="data-type-keyword">any</span> replace
+            <span class="data-type-keyword">any</span> toBeReplaced, <span class="data-type-keyword">any</span>
+            replacement;<br>
+            Każda wartość w tablicy równa toBeReplaced zamieniana jest na replacement.<br>
+            Zwraca referencję do tablicy.
+        </blockquote>
+    </div>
+    <div id="replaceFirst" class="text col s5">
+        <blockquote>
+            <h1 class="flow-text">Array().replaceFirst:</h1>
+            <span class="keyword">func</span> <span class="data-type-keyword">any</span> replaceFirst
+            <span class="data-type-keyword">any</span> toBeReplaced, <span class="data-type-keyword">any</span>
+            replacement;<br>
+            Pierwsza wartość w tablicy równa toBeReplaced zamieniana jest na replacement.<br>
+            Zwraca referencję do tablicy.
+        </blockquote>
+    </div>
+    <div id="replaceLast" class="text col s5">
+        <blockquote>
+            <h1 class="flow-text">Array().replaceFirst:</h1>
+            <span class="keyword">func</span> <span class="data-type-keyword">any</span> replaceFirst
+            <span class="data-type-keyword">any</span> toBeReplaced, <span class="data-type-keyword">any</span>
+            replacement;<br>
+            Ostatnia wartość w tablicy równa toBeReplaced zamieniana jest na replacement.<br>
+            Zwraca referencję do tablicy.
+        </blockquote>
+    </div>
+    <div id="reversed" class="text col s5">
+        <blockquote>
+            <h1 class="flow-text">Array().reversed:</h1>
+            <span class="keyword">func</span> <span class="data-type-keyword">any</span> reversed;<br>
+            Zwraca nową tablicę o długości length(), w której wartość każdego elementu z tablicy this o indeksie i
+            &isin; (-1, length()) jest przypisana do elementu w nowej tablicy o indeksie length() - i - 1.
+        </blockquote>
+    </div>
+    <div id="set" class="text col s5">
+        <blockquote>
+            <h1 class="flow-text">Array().set:</h1>
+            <span class="keyword">func</span> <span class="data-type-keyword">any</span> set
+            <span class="data-type-keyword"> int</span> i, <span class="data-type-keyword">any</span> value;<br>
+            Ustawia i-ty element tablicy na value.<br>
+            Zwraca referencję do tablicy.<br>
+            Jeśli tablica nie posiada i-tego elementu wyświetla komunikat,
+            miejsce błędu i wychodzi z programu.
+        </blockquote>
+    </div>
+    <div id="subarray" class="text col s5">
+        <blockquote>
+            <h1 class="flow-text">Array().subarray:</h1>
+            <span class="keyword">func</span> <span class="data-type-keyword">any</span> subarray
+            <span class="data-type-keyword"> int</span> begin, <span class="data-type-keyword">int</span> end;<br>
+            Zwraca podlistę tablicy od elementu o indeksie begin włącznie do elementy o indeksie end wyłączając go.<br>
+            Jeśli begin < 0 lub end > length() wyświetla komunikat,
+                miejsce błędu i wychodzi z programu.
+        </blockquote>
+    </div>
+    <div id="toList" class="text col s5">
+        <blockquote>
+            <h1 class="flow-text">Array().toList:</h1>
+            <span class="keyword">func</span> <span class="data-type-keyword">any</span> toList;<br>
+            Zwraca listę linkowaną z wszystkimi elementami tablicy.
+        </blockquote>
+    </div>
+    <div id="toStack" class="text col s5">
+        <blockquote>
+            <h1 class="flow-text">Array().toStack:</h1>
+            <span class="keyword">func</span> <span class="data-type-keyword">any</span> toStack;<br>
+            Zwraca stos z wszystkimi elementami tablicy.
+        </blockquote>
+    </div>
+    <div id="toString" class="text col s5">
+        <blockquote>
+            <h1 class="flow-text">Array().toString:</h1>
+            <span class="keyword">func</span> <span class="data-type-keyword">string</span> toString;<br>
+            Zwraca elementy zamienione na ciąg znaków, oddzielone przecinkami, w nawiasach kwadratowych.<br>
+            W razie potrzeby wywoływana automatycznie.
         </blockquote>
     </div>
     <!--JavaScript at end of body for optimized loading-->
