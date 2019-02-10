@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="../../../css/materialize.min.css" media="screen,projection" />
+    <!--Let browser know website is optimized for mobile-->
+    <link rel="stylesheet" href="../../../css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dokumentacja języka Monty</title>
+</head>
+
+<body class="light-blue lighten-3">
+    <div class="navbar-fixed" style="background-color: #33b27b">
+        <nav class="deep-purple darken-1">
+            <div class="nav-wrapper">
+                <a href="#" class="brand-logo right">Monty</a>
+                <a href="#" data-target="mobile-demo" class="sidenav-trigger">
+                    <i class="material-icons">menu</i>
+                </a>
+                <ul id="nav-mobile" class="left hide-o  n-med-and-down">
+                    <li class="red">
+                        <a href="../data.html">sml.data</a>
+                    </li>
+                    <li class="indigo lighten-2">
+                        <a href="#append">append</a>
+                    </li>
+                    <li class="indigo lighten-1">
+                        <a href="#contains">contains</a>
+                    </li>
+                    <li class="indigo">
+                        <a href="#equals">equals</a>
+                    </li>
+                    <li class="indigo darken-1">
+                        <a href="#extend">extend</a>
+                    </li>
+                    <li class="indigo darken-2">
+                        <a href="#find">find</a>
+                    </li>
+                    <li class="indigo darken-3">
+                        <a href="#findFirst">findFirst</a>
+                    </li>
+                    <li class="indigo darken-4">
+                        <a href="#findLast">findLast</a>
+                    </li>
+                    <li class="indigo darken-3">
+                        <a href="#get">get</a>
+                    </li>
+                    <li class="indigo darken-2">
+                        <a href="#head">head</a>
+                    </li>
+                    <li class="indigo darken-1">
+                        <a href="list/iterator.html">Iterator</a>
+                    </li>
+                    <li class="indigo">
+                        <a href="#length">length</a>
+                    </li>
+                    <li class="indigo lighten-1">
+                        <a href="#replace">replace</a>
+                    </li>
+                    <li class="indigo lighten-2">
+                        <a href="#replaceFirst">replaceFirst</a>
+                    </li>
+                    <li class="indigo lighten-1">
+                        <a href="#replaceLast">replaceLast</a>
+                    </li>
+                    <li class="indigo">
+                        <a href="#reversed">reversed</a>
+                    </li>
+                    <li class="indigo darken-1">
+                        <a href="#set">set</a>
+                    </li>
+                    <li class="indigo darken-2">
+                        <a href="#sublist">sublist</a>
+                    </li>
+                    <li class="indigo darken-3">
+                        <a href="#tail">tail</a>
+                    </li>
+                    <li class="indigo darken-4">
+                        <a href="#toArray">toArray</a>
+                    </li>
+                    <li class="indigo darken-3">
+                        <a href="#toStack">toStack</a>
+                    </li>
+                    <li class="indigo darken-2">
+                        <a href="#toString">toString</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <div class="text col s5">
+        <blockquote>
+            <h1 class="flow-text">List:</h1>
+            List reprezentuje listę linkowaną, wszystkie poniższe funkcje są metodami tej struktury i należy je
+            wywoływać po
+            instacji tego obiektu, po kropce.<br>
+            Konstruktorem tego obiektu jest funkcja o nazwie List, przyjmuje dowolną liczbę argumentów o dowolnym
+            typie, z argumentów podanych w konstruktorze zostanie stworzona lista linkowana.
+        </blockquote>
+    </div>
+    <div id="append" class="text col s5">
+        <blockquote>
+            <h1 class="flow-text">List().append:</h1>
+            <span class="keyword">func</span> <span class="data-type-keyword">any</span> append <span
+                class="data-type-keyword">any</span>
+            element;<br>
+            Zwiększa liczbę elementów listy o 1, ustawia miejsce pod ostatnim indeksem na element.<br>
+            Zwraca referencję do listy.
+        </blockquote>
+    </div>
+    <div id="contains" class="text col s5">
+        <blockquote>
+            <h1 class="flow-text">List().contains:</h1>
+            <span class="keyword">func</span> <span class="data-type-keyword">boolean</span> contains <span
+                class="data-type-keyword">any</span>
+            element;<br>
+            Zwraca <span class="keyword">true</span> jeśli element znajduje się w listy, w przeciwnym wypadku zwraca
+            <span class="keyword">false</span>.
+        </blockquote>
+    </div>
+    <div id="equals" class="text col s5">
+        <blockquote>
+            <h1 class="flow-text">List().equals:</h1>
+            <span class="keyword">func</span> <span class="data-type-keyword">boolean</span> equals <span
+                class="data-type-keyword">any</span>
+            other;<br>
+            Zwraca <span class="keyword">true</span> jeśli other jest instancją List, other ma tą samą długość co
+            this, other.get(i) jest równe this.get(i), dla każdego i &isin; (-1, length), w przeciwnym wypadku zwraca
+            <span class="keyword">false</span>.<br>
+            Można ją wywołać operatorem ==, kiedy lewym literałem jest lista.
+        </blockquote>
+    </div>
+    <div id="extend" class="text col s5">
+        <blockquote>
+            <h1 class="flow-text">List().extend:</h1>
+            <span class="keyword">func</span> <span class="data-type-keyword">any</span> extend <span
+                class="data-type-keyword">any</span>
+            otherList;<br>
+            Jeśli otherList nie jest instancją List wyświetla komunikat, miejsce błędu i wychodzi z programu.<br>
+            Zwiększa liczbę elementów listy o otherList.length() i uzupełnia nowo powstałe miejsca elementami
+            listy otherList.<br>
+            Zwraca referencję do listy.
+        </blockquote>
+    </div>
+    <div id="find" class="text col s5">
+        <blockquote>
+            <h1 class="flow-text">List().find:</h1>
+            <span class="keyword">func</span> <span class="data-type-keyword">any</span> find <span
+                class="data-type-keyword">any</span>
+            element;<br>
+            Zwraca listę z indeksami, pod którymi występuje element.
+        </blockquote>
+    </div>
+    <div id="findFirst" class="text col s5">
+        <blockquote>
+            <h1 class="flow-text">List().findFirst:</h1>
+            <span class="keyword">func</span> <span class="data-type-keyword">int</span> findFirst <span
+                class="data-type-keyword">any</span>
+            element;<br>
+            Jeśli istnieje element o wartości równej element zwraca indeks pierwszego takiego elementu, w przeciwnym
+            wypadku zwraca <span class="number">-1</span>.
+        </blockquote>
+    </div>
+    <div id="findLast" class="text col s5">
+        <blockquote>
+            <h1 class="flow-text">List().findLast:</h1>
+            <span class="keyword">func</span> <span class="data-type-keyword">int</span> findFirst <span
+                class="data-type-keyword">any</span>
+            element;<br>
+            Jeśli istnieje element o wartości równej element zwraca indeks ostatniego takiego elementu, w przeciwnym
+            wypadku zwraca <span class="number">-1</span>.
+        </blockquote>
+    </div>
+    <div id="get" class="text col s5">
+        <blockquote>
+            <h1 class="flow-text">List().get:</h1>
+            <span class="keyword">func</span> <span class="data-type-keyword">any</span> get <span
+                class="data-type-keyword">int</span>
+            i;<br>
+            Zwraca i-ty element listy.<br>Jeśli lista nie posiada i-tego elementu wyświetla komunikat,
+            miejsce błędu i wychodzi z programu.
+        </blockquote>
+    </div>
+    <div id="head" class="text col s5">
+        <blockquote>
+            <h1 class="flow-text">List().head:</h1>
+            <span class="keyword">func</span> <span class="data-type-keyword">any</span> head;<br>
+            Zwraca pierwszy element listy.
+            Jeśli lista jest pust wyświetla komunikat, miejsce błędu i wychodzi z programu.
+        </blockquote>
+    </div>
+    <div id="length" class="text col s5">
+        <blockquote>
+            <h1 class="flow-text">List().length:</h1>
+            <span class="keyword">func</span> <span class="data-type-keyword">int</span> length;<br>
+            Zwraca liczbę elementów listy.
+        </blockquote>
+    </div>
+    <div id="replace" class="text col s5">
+        <blockquote>
+            <h1 class="flow-text">List().replace:</h1>
+            <span class="keyword">func</span> <span class="data-type-keyword">any</span> replace
+            <span class="data-type-keyword">any</span> toBeReplaced, <span class="data-type-keyword">any</span>
+            replacement;<br>
+            Każda wartość w listy równa toBeReplaced zamieniana jest na replacement.<br>
+            Zwraca referencję do listy.
+        </blockquote>
+    </div>
+    <div id="replaceFirst" class="text col s5">
+        <blockquote>
+            <h1 class="flow-text">List().replaceFirst:</h1>
+            <span class="keyword">func</span> <span class="data-type-keyword">any</span> replaceFirst
+            <span class="data-type-keyword">any</span> toBeReplaced, <span class="data-type-keyword">any</span>
+            replacement;<br>
+            Pierwsza wartość w listy równa toBeReplaced zamieniana jest na replacement.<br>
+            Zwraca referencję do listy.
+        </blockquote>
+    </div>
+    <div id="replaceLast" class="text col s5">
+        <blockquote>
+            <h1 class="flow-text">List().replaceFirst:</h1>
+            <span class="keyword">func</span> <span class="data-type-keyword">any</span> replaceFirst
+            <span class="data-type-keyword">any</span> toBeReplaced, <span class="data-type-keyword">any</span>
+            replacement;<br>
+            Ostatnia wartość w listy równa toBeReplaced zamieniana jest na replacement.<br>
+            Zwraca referencję do listy.
+        </blockquote>
+    </div>
+    <div id="reversed" class="text col s5">
+        <blockquote>
+            <h1 class="flow-text">List().reversed:</h1>
+            <span class="keyword">func</span> <span class="data-type-keyword">any</span> reversed;<br>
+            Zwraca nową listę o długości length(), w której wartość każdego elementu z listy this o indeksie i
+            &isin; (-1, length()) jest przypisana do elementu w nowej listy o indeksie length() - i - 1.
+        </blockquote>
+    </div>
+    <div id="set" class="text col s5">
+        <blockquote>
+            <h1 class="flow-text">List().set:</h1>
+            <span class="keyword">func</span> <span class="data-type-keyword">any</span> set
+            <span class="data-type-keyword"> int</span> i, <span class="data-type-keyword">any</span> value;<br>
+            Ustawia i-ty element listy na value.<br>
+            Zwraca referencję do listy.<br>
+            Jeśli lista nie posiada i-tego elementu wyświetla komunikat,
+            miejsce błędu i wychodzi z programu.
+        </blockquote>
+    </div>
+    <div id="sublist" class="text col s5">
+        <blockquote>
+            <h1 class="flow-text">List().sublist:</h1>
+            <span class="keyword">func</span> <span class="data-type-keyword">any</span> sublist
+            <span class="data-type-keyword"> int</span> begin, <span class="data-type-keyword">int</span> end;<br>
+            Zwraca podlistę listy od elementu o indeksie begin włącznie do elementy o indeksie end wyłączając go.<br>
+            Jeśli begin < 0 lub end> length() wyświetla komunikat,
+                miejsce błędu i wychodzi z programu.
+        </blockquote>
+    </div>
+    <div id="tail" class="text col s5">
+        <blockquote>
+            <h1 class="flow-text">List().tail:</h1>
+            <span class="keyword">func</span> <span class="data-type-keyword">any</span> tail;<br>
+            Zwraca listę linkowaną bez pierwszego elementu.
+        </blockquote>
+    </div>
+    <div id="toArray" class="text col s5">
+        <blockquote>
+            <h1 class="flow-text">List().toArray:</h1>
+            <span class="keyword">func</span> <span class="data-type-keyword">any</span> toArray;<br>
+            Zwraca tablicę wypełnioną elementami listy linkowanej.
+        </blockquote>
+    </div>
+    <div id="toStack" class="text col s5">
+        <blockquote>
+            <h1 class="flow-text">List().toStack:</h1>
+            <span class="keyword">func</span> <span class="data-type-keyword">any</span> toStack;<br>
+            Zwraca stos z wypełniony elementami listy.
+        </blockquote>
+    </div>
+    <div id="toString" class="text col s5">
+        <blockquote>
+            <h1 class="flow-text">List().toString:</h1>
+            <span class="keyword">func</span> <span class="data-type-keyword">string</span> toString;<br>
+            Zwraca elementy zamienione na ciąg znaków, oddzielone przecinkami, w nawiasach kwadratowych.<br>
+            W razie potrzeby wywoływana automatycznie.
+        </blockquote>
+    </div>
+    <!--JavaScript at end of body for optimized loading-->
+    <script type="text/javascript" src="../../../js/materialize.min.js"></script>
+    <script type="text/javascript" src="../../../js/init.js"></script>
+    <script type="text/javascript" src="../../../js/jquery.js"></script>
+
+</body>
+
+</html>
