@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="../../../css/materialize.min.css" media="screen,projection" />
+    <!--Let browser know website is optimized for mobile-->
+    <link rel="stylesheet" href="../../../css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dokumentacja języka Monty</title>
+</head>
+
+<body class="light-blue lighten-3">
+    <div class="navbar-fixed" style="background-color: #33b27b">
+        <nav class="deep-purple darken-1">
+            <div class="nav-wrapper">
+                <a href="#" class="brand-logo right">Monty</a>
+                <a href="#" data-target="mobile-demo" class="sidenav-trigger">
+                    <i class="material-icons">menu</i>
+                </a>
+                <ul id="nav-mobile" class="left hide-o  n-med-and-down">
+                    <li class="red">
+                        <a href="../data.html">sml.data</a>
+                    </li>
+                    <li class="cyan lighten-2">
+                        <a href="#isArray">isArray</a>
+                    </li>
+                    <li class="cyan lighten-1">
+                        <a href="#isBoolean">isBoolean</a>
+                    </li>
+                    <li class="cyan">
+                        <a href="#isInt">isInt</a>
+                    </li>
+                    <li class="cyan darken-1">
+                        <a href="#isList">isList</a>
+                    </li>
+                    <li class="cyan darken-2">
+                        <a href="#isObject">isObject</a>
+                    </li>
+                    <li class="cyan darken-3">
+                        <a href="#isStack">isStack</a>
+                    </li>
+                    <li class="cyan darken-4">
+                        <a href="#isString">isString</a>
+                    </li>
+
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <div id="isArray" class="text col s5">
+        <blockquote>
+            <h1 class="flow-text">isArray:</h1>
+            <span class="keyword">func</span> <span class="data-type-keyword">boolean</span> isArray <span
+                class="data-type-keyword">any</span> toCheck;<br>
+            Jeśli toCheck jest instancją Array zwraca <span class="keyword">true</span>, w przeciwnym wypadku zwraca
+            <span class="keyword">false</span>.
+        </blockquote>
+    </div>
+    <div id="isBoolean" class="text col s5">
+        <blockquote>
+            <h1 class="flow-text">isBoolean:</h1>
+            <span class="keyword">func</span> <span class="data-type-keyword">boolean</span> isBoolean <span
+                class="data-type-keyword">any</span> toCheck;<br>
+            Jeśli toCheck jest wartością logiczną zwraca <span class="keyword">true</span>, w przeciwnym wypadku zwraca
+            <span class="keyword">false</span>.
+        </blockquote>
+    </div>
+
+    <div id="isInt" class="text col s5">
+        <blockquote>
+            <h1 class="flow-text">isInt:</h1>
+            <span class="keyword">func</span> <span class="data-type-keyword">boolean</span> isInt <span
+                class="data-type-keyword">any</span> toCheck;<br>
+            Jeśli toCheck należy do zbioru liczb całkowitych zwraca <span class="keyword">true</span>, w przeciwnym
+            wypadku zwraca <span class="keyword">false</span>.
+        </blockquote>
+    </div>
+
+    <div id="isList" class="text col s5">
+        <blockquote>
+            <h1 class="flow-text">isList:</h1>
+            <span class="keyword">func</span> <span class="data-type-keyword">boolean</span> isList <span
+                class="data-type-keyword">any</span> toCheck;<br>
+            Jeśli toCheck jest instancją List zwraca <span class="keyword">true</span>, w przeciwnym wypadku zwraca
+            <span class="keyword">false</span>.
+        </blockquote>
+    </div>
+
+    <div id="isObject" class="text col s5">
+        <blockquote>
+            <h1 class="flow-text">isObject:</h1>
+            <span class="keyword">func</span> <span class="data-type-keyword">boolean</span> isObject <span
+                class="data-type-keyword">any</span> toCheck;<br>
+            Jeśli toCheck jest typem złożonym zwraca <span class="keyword">true</span>, w przeciwnym wypadku zwraca
+            <span class="keyword">false</span>.
+        </blockquote>
+    </div>
+
+    <div id="isReal" class="text col s5">
+        <blockquote>
+            <h1 class="flow-text">isReal:</h1>
+            <span class="keyword">func</span> <span class="data-type-keyword">boolean</span> isReal <span
+                class="data-type-keyword">any</span> toCheck;<br>
+            Jeśli toCheck należy do zbioru liczb rzeczywistych zwraca <span class="keyword">true</span>, w przeciwnym
+            wypadku zwraca <span class="keyword">false</span>.
+        </blockquote>
+    </div>
+
+    <div id="isStack" class="text col s5">
+        <blockquote>
+            <h1 class="flow-text">isStack:</h1>
+            <span class="keyword">func</span> <span class="data-type-keyword">boolean</span> isStack <span
+                class="data-type-keyword">any</span> toCheck;<br>
+            Jeśli toCheck jest instancją Stack zwraca <span class="keyword">true</span>, w przeciwnym
+            wypadku zwraca <span class="keyword">false</span>.
+        </blockquote>
+    </div>
+
+    <div id="isString" class="text col s5">
+        <blockquote>
+            <h1 class="flow-text">isString:</h1>
+            <span class="keyword">func</span> <span class="data-type-keyword">boolean</span> isString <span
+                class="data-type-keyword">any</span> toCheck;<br>
+            Jeśli toCheck jest ciągiem znaków (o dowolnej długości) zwraca <span class="keyword">true</span>, w
+            przeciwnym
+            wypadku zwraca <span class="keyword">false</span>.
+        </blockquote>
+    </div>
+
+
+    <!--JavaScript at end of body for optimized loading-->
+    <script type="text/javascript" src="../../../js/materialize.min.js"></script>
+    <script type="text/javascript" src="../../../js/init.js"></script>
+    <script type="text/javascript" src="../../../js/jquery.js"></script>
+
+</body>
+
+</html>
