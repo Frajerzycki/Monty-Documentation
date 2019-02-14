@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="../../../css/materialize.min.css" media="screen,projection" />
+    <!--Let browser know website is optimized for mobile-->
+    <link rel="stylesheet" href="../../../css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dokumentacja języka Monty</title>
+</head>
+
+<body class="light-blue lighten-3">
+    <div class="navbar-fixed" style="background-color: #33b27b">
+        <nav class="deep-purple darken-3">
+            <div class="nav-wrapper">
+                <a href="#" class="brand-logo right">Monty</a>
+                <a href="#" data-target="mobile-demo" class="sidenav-trigger">
+                    <i class="material-icons">menu</i>
+                </a>
+                <ul id="nav-mobile" class="left hide-o  n-med-and-down">
+                    <li class="red">
+                        <a href="../data.html">sml.data</a>
+                    </li>
+                    <li class="teal lighten-2">
+                        <a href="#equals">equals</a>
+                    </li>
+                    <li class="teal lighten-1">
+                        <a href="#iterator">iterator #do zrobienia</a>
+                    </li>
+                    <li class="teal">
+                        <a href="#length">length</a>
+                    </li>
+                    <li class="teal darken-1">
+                        <a href="#peek">peek</a>
+                    </li>
+                    <li class="teal darken-2">
+                        <a href="#pop">pop</a>
+                    </li>
+                    <li class="teal darken-3">
+                        <a href="#push">push</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <div class="text col s5">
+        <blockquote>
+            <h1 class="flow-text">Stack:</h1>
+            Stack reprezentuje stos, wszystkie poniższe funkcje są metodami tej struktury i należy je
+            wywoływać po instacji tego obiektu, po kropce.<br>
+            Konstruktorem tego obiektu jest funkcja o nazwie Stack, nie przyjmuje argumentów.
+            Zwraca pusty stos.
+        </blockquote>
+    </div>
+    <div id="equals" class="text col s5">
+        <blockquote>
+            <h1 class="flow-text">Stack().equals:</h1>
+            <span class="keyword">func</span> <span class="data-type-keyword">boolean</span> equals <span
+                class="data-type-keyword">any</span>
+            other;<br>
+            Jeśli other jest instancją Stack, other ma tą samą długość co
+            this i wszystkie każda kolejna para elementów z obu stosów jest sobie równa zwraca <span
+                class="keyword">true</span>, w przeciwnym wypadku zwraca
+            <span class="keyword">false</span>.<br>
+            Można ją wywołać operatorem ==, kiedy lewym literałem jest stos.
+        </blockquote>
+    </div>
+    <div id="length" class="text col s5">
+        <blockquote>
+            <h1 class="flow-text">Stack().length:</h1>
+            <span class="keyword">func</span> <span class="data-type-keyword">int</span> length;<br>
+            Zwraca ilość elementów na stosie.
+        </blockquote>
+    </div>
+    <div id="peek" class="text col s5">
+        <blockquote>
+            <h1 class="flow-text">Stack().peek:</h1>
+            <span class="keyword">func</span> <span class="data-type-keyword">any</span> peek;<br>
+            Zwraca element z góry stosu.
+        </blockquote>
+    </div>
+    <div id="pop" class="text col s5">
+        <blockquote>
+            <h1 class="flow-text">Stack().pop:</h1>
+            <span class="keyword">func</span> <span class="data-type-keyword">any</span> pop;<br>
+            Zwraca element z góry stosu i usuwa go.
+        </blockquote>
+    </div>
+    <div id="push" class="text col s5">
+        <blockquote>
+            <h1 class="flow-text">Stack().push:</h1>
+            <span class="keyword">func</span> <span class="data-type-keyword">any</span> push <span
+                class="data-type-keyword">any</span> element;<br>
+            Wrzuca element na górę stosu.
+            Zwraca referencję do stosu.
+        </blockquote>
+    </div>
+    <div id="toArray" class="text col s5">
+        <blockquote>
+            <h1 class="flow-text">Stack().toArray:</h1>
+            <span class="keyword">func</span> <span class="data-type-keyword">any</span> toArray;<br>
+            Zwraca tablicę wypełnioną elementami stosu, gdzie początkiem owej tablicy jest dół stosu.
+        </blockquote>
+    </div>
+    <div id="toList" class="text col s5">
+        <blockquote>
+            <h1 class="flow-text">Stack().toList:</h1>
+            <span class="keyword">func</span> <span class="data-type-keyword">any</span> toList;<br>
+            Zwraca listę wypełnioną elementami stosu, gdzie początkiem owej listy jest dół stosu.
+        </blockquote>
+    </div>
+    <div id="toString" class="text col s5">
+        <blockquote>
+            <h1 class="flow-text">Stack().toString:</h1>
+            <span class="keyword">func</span> <span class="data-type-keyword">string</span> toString;<br>
+            Zwraca elementy stosu, gdzie początkiem ciągu jest dół stosu, zamienione na ciąg znaków, oddzielone
+            przecinkami, w nawiasach kwadratowych.<br>
+            W razie potrzeby wywoływana automatycznie.
+        </blockquote>
+    </div>
+    <!--JavaScript at end of body for optimized loading-->
+    <script type="text/javascript" src="../../../js/materialize.min.js"></script>
+    <script type="text/javascript" src="../../../js/init.js"></script>
+    <script type="text/javascript" src="../../../js/jquery.js"></script>
+
+</body>
+
+</html>
