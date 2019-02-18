@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="../../css/materialize.min.css" media="screen,projection" />
+    <!--Let browser know website is optimized for mobile-->
+    <link rel="stylesheet" href="../../css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dokumentacja języka Monty</title>
+</head>
+
+<body class="light-blue lighten-3">
+    <div class="navbar-fixed" style="background-color: #33b27b">
+        <nav class="red">
+            <div class="nav-wrapper">
+                <a href="#" class="brand-logo right">Monty</a>
+                <a href="#" data-target="mobile-demo" class="sidenav-trigger">
+                    <i class="material-icons">menu</i>
+                </a>
+                <ul id="nav-mobile" class="left hide-o  n-med-and-down">
+                    <li class="purple darken-3">
+                        <a href="../sml.html">sml</a>
+                    </li>
+                    <li class="brown lighten-3">
+                        <a href="#abs">abs</a>
+                    </li>
+                    <li class="brown lighten-2">
+                        <a href="#e">e</a>
+                    </li>
+                    <li class="brown lighten-1">
+                        <a href="#exp">exp</a>
+                    </li>
+                    <li class="brown">
+                        <a href="#factorial">factorial</a>
+                    </li>
+                    <li class="brown darken-1">
+                        <a href="#log">log</a>
+                    </li>
+                    <li class="brown darken-2">
+                        <a href="#max">max</a>
+                    </li>
+                    <li class="brown darken-3">
+                        <a href="#min">min</a>
+                    </li>
+                    <li class="brown darken-4">
+                        <a href="#pi">pi</a>
+                    </li>
+                    <li class="brown darken-3">
+                        <a href="#pow">pow</a>
+                    </li>
+                    <li class="brown darken-2">
+                        <a href="#root">root</a>
+                    </li>
+                    <li class="brown darken-1">
+                        <a href="#round">round</a>
+                    </li>
+                    <li class="brown">
+                        <a href="#scale">scale</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <div class="text col s5">
+        <blockquote>
+            <h1 class="flow-text">math:</h1>
+            Moduł math zawiera funkcje ułatwiające operacje matematyczne.
+        </blockquote>
+    </div>
+    <div id="abs" class="text col s5">
+        <blockquote>
+            <h1 class="flow-text">abs:</h1>
+            <span class="keyword">func</span> <span class="data-type-keyword">real</span> abs <span
+                class="data-type-keyword">real</span> f;<br>
+            Zwraca wartość absolutną (bez znaku) liczby.
+        </blockquote>
+    </div>
+    <div id="e" class="text col s5">
+        <blockquote>
+            <h1 class="flow-text">e:</h1>
+            <span class="keyword">func</span> <span class="data-type-keyword">real</span> e;<br>
+            Zwraca <span
+                class="number">2.718281828459045235360287471352662497757247093699959574966967627724076630353</span>.
+        </blockquote>
+    </div>
+    <div id="exp" class="text col s5">
+        <blockquote>
+            <h1 class="flow-text">exp:</h1>
+            <span class="keyword">func</span> <span class="data-type-keyword">real</span> exp <span
+                class="data-type-keyword">real</span> x, <span class="data-type-keyword">int</span> scale;<br>
+            Zwraca e<sup>x</sup> z dokładnością do scale miejsc dziesiętnych po przecinku.
+        </blockquote>
+    </div>
+    <div id="factorial" class="text col s5">
+        <blockquote>
+            <h1 class="flow-text">factorial:</h1>
+            <span class="keyword">func</span> <span class="data-type-keyword">int</span> factorial <span
+                class="data-type-keyword">int</span> n;<br>
+            Zwraca n!.<br>
+            Jeśli n jest ujemne wyświetla komunikat, miejsce błędu i wychodzi z programu.
+        </blockquote>
+    </div>
+    <div id="log" class="text col s5">
+        <blockquote>
+            <h1 class="flow-text">log:</h1>
+            <span class="keyword">func</span> <span class="data-type-keyword">real</span> log <span
+                class="data-type-keyword">real</span> a, <span class="data-type-keyword">real</span> b, <span
+                class="data-type-keyword">int</span> scale;<br>
+            Zwraca log<sub>a</sub>b z dokładnością do scale miejsc dziesiętnych po przecinku.<br>
+            Jeśli a jest mniejsze od jeden lub b jest ujemne wyświetla komunikat, miejsce błędu i wychodzi z programu.
+        </blockquote>
+    </div>
+    <div id="max" class="text col s5">
+        <blockquote>
+            <h1 class="flow-text">max:</h1>
+            <span class="keyword">func</span> <span class="data-type-keyword">real</span> max <span
+                class="data-type-keyword">real</span> a,
+            <span class="data-type-keyword">real</span> b;<br>
+            Zwraca większą z liczb a i b.
+        </blockquote>
+    </div>
+    <div id="min" class="text col s5">
+        <blockquote>
+            <h1 class="flow-text">min:</h1>
+            <span class="keyword">func</span> <span class="data-type-keyword">real</span> min <span
+                class="data-type-keyword">real</span> a,
+            <span class="data-type-keyword">real</span> b;<br>
+            Zwraca mniejszą z liczb a i b.
+        </blockquote>
+    </div>
+    <div id="pi" class="text col s5">
+        <blockquote>
+            <h1 class="flow-text">pi:</h1>
+            <span class="keyword">func</span> <span class="data-type-keyword">real</span> pi;<br>
+            Zwraca <span
+                class="number">3.1415926535897932384626433832795028841971693993751058209749445923078164062862089986280348253421170679</span>.
+        </blockquote>
+    </div>
+    <div id="pow" class="text col s5">
+        <blockquote>
+            <h1 class="flow-text">pow:</h1>
+            <span class="keyword">func</span> <span class="data-type-keyword">real</span> pow <span
+                class="data-type-keyword">real</span> basis,
+            <span class="data-type-keyword">int</span> index;<br>
+            Zwraca basis<sup>index</sup>.<br>
+            Jeśli index &ge; 10<sup>8</sup> wyświetla komunikat, miejsce błędu i wychodzi z programu.
+        </blockquote>
+    </div>
+    <div id="root" class="text col s5">
+        <blockquote>
+            <h1 class="flow-text">root:</h1>
+            <span class="keyword">func</span> <span class="data-type-keyword">real</span> root <span
+                class="data-type-keyword">int</span> degree,
+            <span class="data-type-keyword">real</span> f, 
+            <span class="data-type-keyword">int</span> scale;<br>
+            <sup>degree</sup>&radic;f z dokładnością do scale miejsc dziesiętnych po przecinku.<br>
+            Jeśli f &lt; 0 albo scale &lt; 1 albo degree &lt; 1 wyświetla komunikat, miejsce błędu i wychodzi z programu.
+        </blockquote>
+    </div>
+    <div id="round" class="text col s5">
+        <blockquote>
+            <h1 class="flow-text">round:</h1>
+            <span class="keyword">func</span> <span class="data-type-keyword">real</span> round <span
+                class="data-type-keyword">real</span> f, <span
+                class="data-type-keyword">int</span> scale;<br>
+            Zaokrągla (od połowy w górę) f do scale miejsc dziesiętnych po przecinku.
+        </blockquote>
+    </div>
+    <div id="scale" class="text col s5">
+        <blockquote>
+            <h1 class="flow-text">scale:</h1>
+            <span class="keyword">func</span> <span class="data-type-keyword">int</span> scale <span
+                class="data-type-keyword">real</span> f;<br>
+            Zwraca liczbę miejsc dziesiętnych po przecinku liczby f.
+        </blockquote>
+    </div>
+    <!--JavaScript at end of body for optimized loading-->
+    <script type="text/javascript" src="../../js/materialize.min.js"></script>
+    <script type="text/javascript" src="../../js/init.js"></script>
+    <script type="text/javascript" src="../../js/jquery.js"></script>
+
+</body>
+
+</html>
