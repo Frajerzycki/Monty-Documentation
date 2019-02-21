@@ -45,6 +45,9 @@
                     <li class="pink darken-4">
                         <a href="#struktury">Struktury</a>
                     </li>
+                    <li class="amber">
+                        <a href="#importowanie">Importowanie</a>
+                    </li>
                     <li class="blue lighten-1">
                         <a href="#wiecej">Więcej szczegółów</a>
                     </li>
@@ -453,8 +456,74 @@
                         println(me1 me2 ==);
                         println(me1.firstName);<br>
                         println(me1.lastName);<br>
+                    </p>
+
                 </div>
-                </p>
+            </div>
+        </div>
+        <div class="divider" style="width: 100%"></div>
+        <div id="importowanie">
+            <h1 class="flow-text">Importowanie:</h1>
+            <blockquote class="text">
+                W Montym znajduje się biblioteka standardowa z wieloma modułami.<br>
+                Można importować całe moduły importując je tak samo jak funkcje lub zmienne po prostu nie precyzując co
+                chce się z nich zaimportować.<br>
+                Pierwszym członem przy importowaniu musi być nazwa pliku bez rozszerzenia, folder albo bilbioteka
+                napisana w javie z użyciem specjalnie przygotowanych bibliotek (taką biblioteką jest sml).<br>
+                Nie można zaimportować całej biblioteki na raz.
+            </blockquote>
+            <span>examples/test.mt</span>
+            <div class="row col s12">
+                <div class="code col s1">
+                    <p>
+                        <span class="keyword">func</span> <span class="data-type-keyword">void</span> t;<br>
+                        <span class="keyword">end</span>;
+                    </p>
+                </div>
+            </div>
+            <blockquote class="text">
+                Jeśli tym członem jest nazwa pliku bez rozszerzenia to, aby zaimportować wszystkie funckje i zmienne
+                można to tak zostawić, ale jeśli chce się zaimportować konkretną funkcję lub zmienną to po kropce trzeba
+                napisać jej nazwę (jeśli funkcja i zmienna ma taką samą nazwę to obie zostaną zaimportowane).<br>
+            </blockquote>
+            <span>examples/fromFileImportingTest.mt</span>
+            <div class="row col s12">
+                <div class="code col s1">
+                    <p>
+                        <span class="keyword">import</span> test.t;<br>
+                        t();
+                    </p>
+                </div>
+            </div>
+            <blockquote class="text">
+                Z kolei jeśli na początku jest folder to nie można go całego zaimportować, a należy sprecyzować plik po
+                kropce, tak jak w poprzednim przykładzie po nazwie pliku można napisać co konkretnie chce
+                się zaimportować.
+            </blockquote>
+            <span>fromFolderImportingTest.mt</span>
+            <div class="row col s12">
+                <div class="code col s2">
+                    <p>
+                        <span class="keyword">import</span> examples.test.t;<br>
+                        t();
+                    </p>
+                </div>
+            </div>
+            <blockquote class="text">
+                W przypadku gdy na początkowym członem jest nazwa biblioteki i nie jest nią sml to trzeba wcześniej
+                zadeklarować jej użycie, a potem nazwa modułu (w którym może być inny moduł) albo funckji lub
+                zmiennej.<br>
+                Poniżej podam przykład, kiedy z jakiejś przyczyny mamy bilbiotekę sml skompilowaną (pod nazwą sml.jar)
+                jako osobną bibliotekę, a nie bibliotekę wbudowaną w interpreter.
+            </blockquote>
+            <div class="row col s12">
+                <div class="code col s2">
+                    <p>
+                        <span class="keyword">jar</span> sml;<br>
+                        <span class="keyword">import</span> sml.io.println;<br>
+                        println(<span class="string">"Test!"</span>);
+                    </p>
+                </div>
             </div>
         </div>
         <div class="divider" style="width: 100%"></div>
