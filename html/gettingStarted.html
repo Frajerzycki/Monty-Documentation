@@ -241,13 +241,13 @@
                         <br>
                         <span class="keyword">while</span> a
                         <span class="number">100</span>
-                        < a <span class="number">0</span> > &;
-                            <br>
-                            <span style="margin: 2em;">println(a);</span><br>
-                            <span style="margin: 2em;">a <span class="number">1</span> -=;</span>
-                            <br>
-                            <span class="keyword">end</span>;
-                            <br>
+                        &lt; a <span class="number">0</span> &gt; &;
+                        <br>
+                        <span style="margin: 2em;">println(a);</span><br>
+                        <span style="margin: 2em;">a <span class="number">1</span> -=;</span>
+                        <br>
+                        <span class="keyword">end</span>;
+                        <br>
                     </p>
                 </div>
                 <div class="code col s3 offset-s1">
@@ -259,13 +259,13 @@
                         <br>
                         <span class="keyword">do while</span> a
                         <span class="number">100</span>
-                        < a <span class="number">0</span> > &;
-                            <br>
-                            <span style="margin: 2em;">println(a);</span><br>
-                            <span style="margin: 2em;">a <span class="number">1</span> -=;</span>
-                            <br>
-                            <span class="keyword">end</span>;
-                            <br>
+                        &lt; a <span class="number">0</span> &gt; &;
+                        <br>
+                        <span style="margin: 2em;">println(a);</span><br>
+                        <span style="margin: 2em;">a <span class="number">1</span> -=;</span>
+                        <br>
+                        <span class="keyword">end</span>;
+                        <br>
                     </p>
                 </div>
             </div>
@@ -466,11 +466,13 @@
             <h1 class="flow-text">Importowanie:</h1>
             <blockquote class="text">
                 W Montym znajduje się biblioteka standardowa z wieloma modułami.<br>
-                Można importować całe moduły importując je tak samo jak funkcje lub zmienne po prostu nie precyzując co
+                Można importować całe moduły importując je tak samo jak funkcje lub zmienne, po prostu nie precyzując co
                 chce się z nich zaimportować.<br>
                 Pierwszym członem przy importowaniu musi być nazwa pliku bez rozszerzenia, folder albo bilbioteka
                 napisana w javie z użyciem specjalnie przygotowanych bibliotek (taką biblioteką jest sml).<br>
-                Nie można zaimportować całej biblioteki na raz.
+                Nie można zaimportować całej biblioteki na raz.<br>
+                Importowanie struktury przebiega tak samo jak importowanie funkcji, ponieważ nie cała struktura jest
+                importowana, a jedynie jej konstruktor.
             </blockquote>
             <span>examples/test.mt</span>
             <div class="row col s12">
@@ -510,16 +512,16 @@
                 </div>
             </div>
             <blockquote class="text">
-                W przypadku gdy na początkowym członem jest nazwa biblioteki i nie jest nią sml to trzeba wcześniej
-                zadeklarować jej użycie, a potem nazwa modułu (w którym może być inny moduł) albo funckji lub
+                W przypadku gdy początkowym członem jest nazwa biblioteki i nie jest nią sml to trzeba wcześniej
+                zadeklarować jej użycie, a potem nazwa modułu (w którym może być inny moduł) albo funkcji lub
                 zmiennej.<br>
                 Poniżej podam przykład, kiedy z jakiejś przyczyny mamy bilbiotekę sml skompilowaną (pod nazwą sml.jar)
                 jako osobną bibliotekę, a nie bibliotekę wbudowaną w interpreter.
             </blockquote>
             <div class="row col s12">
-                <div class="code col s2">
+                <div class="code col s3">
                     <p>
-                        <span class="keyword">jar</span> sml;<br>
+                        <span class="keyword">jar</span> sml; <span style="color: green"># deklaracja użycia biblioteki</span><br>
                         <span class="keyword">import</span> sml.io.println;<br>
                         println(<span class="string">"Test!"</span>);
                     </p>
