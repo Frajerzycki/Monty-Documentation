@@ -46,6 +46,9 @@
                         <a href="#replaceFirst">replaceFirst</a>
                     </li>
                     <li class="green darken-4">
+                        <a href="#split">split</a>
+                    </li>
+                    <li class="green darken-3">
                         <a href="#startsWith">startsWith</a>
                     </li>
                 </ul>
@@ -100,18 +103,26 @@
         <blockquote>
             <h1 class="flow-text">replace:</h1>
             <span class="keyword">func</span> <span class="data-type-keyword">boolean</span> replace <span
-                class="data-type-keyword">string</span> str, <span class="data-type-keyword">string</span> toBeReplaced,
+                class="data-type-keyword">string</span> str, <span class="data-type-keyword">string</span> regex,
             <span class="data-type-keyword">string</span> replacement;<br>
-            Zwraca str z każdym powtórzeniem toBeReplaced zamienonym na replacement.
+            Zwraca str z każdym powtórzeniem pasującym do regex zamienonym na replacement.
         </blockquote>
     </div>
     <div id="replaceFirst" class="text col s5">
         <blockquote>
             <h1 class="flow-text">replaceFirst:</h1>
             <span class="keyword">func</span> <span class="data-type-keyword">boolean</span> replaceFirst <span
-                class="data-type-keyword">string</span> str, <span class="data-type-keyword">string</span> toBeReplaced,
+                class="data-type-keyword">string</span> str, <span class="data-type-keyword">string</span> regex,
             <span class="data-type-keyword">string</span> replacement;<br>
-            Zwraca str z pierwszym powtórzeniem toBeReplaced zamienonym na replacement.
+            Zwraca str z pierwszym powtórzeniem pasującym do regex zamienonym na replacement.
+        </blockquote>
+    </div>
+    <div id="split" class="text col s5">
+        <blockquote>
+            <h1 class="flow-text">split:</h1>
+            <span class="keyword">func</span> <span class="data-type-keyword">any</span> split <span
+                class="data-type-keyword">string</span> str, <span class="data-type-keyword">string</span> regex;<br>
+            Zwraca Array obiektów podzielonych wystąpieniami ciągów znaków pasujących do regex.
         </blockquote>
     </div>
     <div id="startsWith" class="text col s5">
