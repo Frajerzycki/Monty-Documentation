@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="../../css/materialize.min.css" media="screen,projection" />
+    <!--Let browser know website is optimized for mobile-->
+    <link rel="stylesheet" href="../../css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dokumentacja języka Monty</title>
+</head>
+
+<body class="light-blue lighten-3">
+    <div class="navbar-fixed" style="background-color: #33b27b">
+        <nav class="red darken-4">
+            <div class="nav-wrapper">
+                <a href="#" class="brand-logo right">Monty</a>
+                <a href="#" data-target="mobile-demo" class="sidenav-trigger">
+                    <i class="material-icons">menu</i>
+                </a>
+                <ul id="nav-mobile" class="left hide-o  n-med-and-down">
+                    <li class="purple darken-3">
+                        <a href="../sml.html">sml</a>
+                    </li>
+                    <li class="grey lighten-1">
+                        <a href="#toBoolean">toBoolean</a>
+                    </li>
+                    <li class="grey">
+                        <a href="#toChar">toChar</a>
+                    </li>
+                    <li class="grey darken-1">
+                        <a href="#toInt">toInt</a>
+                    </li>
+                    <li class="grey darken-2">
+                        <a href="#toReal">toReal</a>
+                    </li>
+                    <li class="grey darken-3">
+                        <a href="#toString">toString</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <div class="text col s5">
+        <blockquote>
+            <h1 class="flow-text">casts:</h1>
+            Moduł casts zawierający funkcje zamieniające wbudowane typy danych na inne, wbudowane typy danych.
+        </blockquote>
+    </div>
+    <div id="toBoolean" class="text col s5">
+        <blockquote>
+            <h1 class="flow-text">toBoolean:</h1>
+            <span class="keyword">func</span> <span class="data-type-keyword">boolean</span> toBoolean <span class="data-type-keyword">any</span> a;<br>
+            Jeśli a jest równe <span class="data-type-keyword">void</span> wyświetla komunikat, miejsce błędu i wychodzi z programu,<br>
+            w przeciwnym wypadku jeśli a jest liczbą rzeczywistą zwraca a &gt; <span class="number">0</span>,<br>
+            w przeciwnym wypadku jeśli a jest wartością boolowską zwraca tą wartość nie zmienioną,<br>
+            w przeciwnym wypadku jeśli a jest ciągiem znaków zwraca equalsIgnoreCase(a, <span class="string">"true</span>),<br>
+            w przeciwnym wypadku wyświetla komunikat, miejsce błędu i wychodzi z programu.
+        </blockquote>
+    </div>
+    <div id="toChar" class="text col s5">
+        <blockquote>
+            <h1 class="flow-text">toChar:</h1>
+            <span class="keyword">func</span> <span class="data-type-keyword">string</span> toChar <span class="data-type-keyword">int</span> integer;<br>
+            Zwraca znak o numerze integer w standardzie unicode. 
+        </blockquote>
+    </div>
+    <div id="toInt" class="text col s5">
+        <blockquote>
+            <h1 class="flow-text">toInt:</h1>
+            <span class="keyword">func</span> <span class="data-type-keyword">int</span> toInt <span class="data-type-keyword">any</span> a;<br>
+            Jeśli a jest równe <span class="data-type-keyword">void</span> wyświetla komunikat, miejsce błędu i wychodzi z programu,<br>
+            w przeciwnym wypadku jeśli a jest liczbą rzeczywistą zwraca część całkowitą liczby a,<br>
+            w przeciwnym wypadku jeśli a jest wartością boolowską jeśli a zwraca <span class="number">1</span> w przeciwnym wypadku zwraca <span class="number">0</span>,<br>
+            w przeciwnym wypadku jeśli a jest ciągiem znaków reprezentującym liczbę rzeczywistą zwraca część całkowitą tej liczby ,<br>
+            w przeciwnym wypadku wyświetla komunikat, miejsce błędu i wychodzi z programu.
+        </blockquote>
+    </div>
+    <div id="toReal" class="text col s5">
+        <blockquote>
+            <h1 class="flow-text">toReal:</h1>
+            <span class="keyword">func</span> <span class="data-type-keyword">real</span> toReal <span class="data-type-keyword">any</span> a;<br>
+            Jeśli a jest równe <span class="data-type-keyword">void</span> wyświetla komunikat, miejsce błędu i wychodzi z programu,<br>
+            w przeciwnym wypadku jeśli a jest liczbą rzeczywistą zwraca tą liczbę,<br>
+            w przeciwnym wypadku jeśli a jest wartością boolowską jeśli a zwraca <span class="number">1</span> w przeciwnym wypadku zwraca <span class="number">0</span>,<br>
+            w przeciwnym wypadku jeśli a jest ciągiem znaków reprezentującym liczbę rzeczywistą zwraca tą liczbę,<br>
+            w przeciwnym wypadku wyświetla komunikat, miejsce błędu i wychodzi z programu.
+        </blockquote>
+    </div>
+    <div id="toString" class="text col s5">
+        <blockquote>
+            <h1 class="flow-text">toString:</h1>
+            <span class="keyword">func</span> <span class="data-type-keyword">string</span> toString <span class="data-type-keyword">any</span> a;<br>
+            Zwraca ciąg znaków reprezentujący wartość a.
+        </blockquote>
+    </div>
+    <!--JavaScript at end of body for optimized loading-->
+    <script type="text/javascript" src="../../js/materialize.min.js"></script>
+    <script type="text/javascript" src="../../js/init.js"></script>
+    <script type="text/javascript" src="../../js/jquery.js"></script>
+
+</body>
+
+</html>
