@@ -17,7 +17,7 @@
 
 <body class="light-blue lighten-3">
     <div class="navbar-fixed" style="background-color: #33b27b">
-        <nav class="red darken-4">
+        <nav class="red darken-2">
             <div class="nav-wrapper">
                 <a href="#" class="brand-logo right">Monty</a>
                 <a href="#" data-target="mobile-demo" class="sidenav-trigger">
@@ -27,14 +27,8 @@
                     <li class="purple darken-3">
                         <a href="../sml.html">sml</a>
                     </li>
-                    <li class="deep-orange lighten-2">
-                        <a href="#argc">argc</a>
-                    </li>
-                    <li class="deep-orange lighten-1">
-                        <a href="#argv">argv</a>
-                    </li>
-                    <li class="deep-orange">
-                        <a href="#exit">exit</a>
+                    <li class="cyan lighten-2">
+                        <a href="#run">run</a>
                     </li>
                 </ul>
             </div>
@@ -42,32 +36,17 @@
     </div>
     <div class="text col s5">
         <blockquote>
-            <h1 class="flow-text">system:</h1>
-            Moduł system umożliwia prostą komunikację z systemem.
+            <h1 class="flow-text">language:</h1>
+            Moduł language zawiera funkcje ułatwiające wewnętrzną komunikację z językiem Monty.
         </blockquote>
     </div>
-    <div id="argc" class="text col s5">
+    <div id="run" class="text col s5">
         <blockquote>
-            <h1 class="flow-text">argc:</h1>
-            <span class="keyword">func</span> <span class="data-type-keyword">int</span> argc;<br>
-            Zwraca liczbę argumentów konsolowych licząc też nazwę pliku.
+            <h1 class="flow-text">run:</h1>
+            <span class="keyword">func</span> <span class="data-type-keyword">void</span> run <span class="data-type-keyword">string</span> code;<br>
+            Uruchamia code jako oddzielny program napisany w języku Monty.
         </blockquote>
-    </div>
-    <div id="argv" class="text col s5">
-        <blockquote>
-            <h1 class="flow-text">argv:</h1>
-            <span class="keyword">func</span> <span class="data-type-keyword">string</span> argv <span class="keyword">int</span> index;<br>
-            Zwraca argument konsolowy pod indeksem index, gdzie argv(0) zwraca wpisaną ścieżkę do pliku.
-            Jeśli index jest ujemny albo większy lub równy liczbie argumentów wyświetla komunikat, miejscę błędu i wychodzi z programu. 
-        </blockquote>
-    </div>
-    <div id="exit" class="text col s5">
-        <blockquote>
-            <h1 class="flow-text">exit:</h1>
-            <span class="keyword">func</span> <span class="data-type-keyword">void</span> exit <span class="keyword">int</span> status;<br>
-            Wychodzi z programu ze statusem status.
-        </blockquote>
-    </div>
+    </div
     <!--JavaScript at end of body for optimized loading-->
     <script type="text/javascript" src="../../js/materialize.min.js"></script>
     <script type="text/javascript" src="../../js/init.js"></script>
